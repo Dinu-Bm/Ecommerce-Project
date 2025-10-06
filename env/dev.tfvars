@@ -1,0 +1,10 @@
+environment           = "dev"
+aws_region            = "ap-south-1"
+vpc_cidr              = "10.0.0.0/16"
+availability_zones    = ["ap-south-1a", "ap-south-1b"]
+app_instance_type     = "t2.micro"
+db_instance_type      = "db.t2.micro"
+db_username           = "admin"
+db_password           = "ChangeMe123!"  # Change this in production!
+key_name              = "ecommerce-key"
+jenkins_instance_type = "t2.micro"
