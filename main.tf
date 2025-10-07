@@ -50,3 +50,11 @@ module "rds" {
 }
 
 
+# S3 Module
+module "s3" {
+  source = "./modules/s3"
+
+  environment = var.environment
+}
+
+
