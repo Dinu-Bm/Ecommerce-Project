@@ -57,4 +57,15 @@ module "s3" {
   environment = var.environment
 }
 
+# Jenkins Module
+# Jenkins Module
+module "jenkins" {
+  source = "./modules/jenkins"
+
+  environment        = var.environment
+  instance_type      = var.jenkins_instance_type
+  key_name           = aws_key_pair.ecommerce.key_name
+  public_subnet_ids  = module.vpc.public_subnet_ids
+  security_group_id  = module.security_groups.jenkins_sg_id
+}
 

@@ -27,8 +27,9 @@ variable "availability_zones" {
 }
 
 variable "key_name" {
-  description = "Name of the EC2 key pair"
+  description = "Name of the EC2 Key Pair"
   type        = string
+  default     = "ecommerce-key"
 }
 
 variable "db_instance_type" {
@@ -47,4 +48,10 @@ variable "db_password" {
   description = "Database administrator password"
   type        = string
   sensitive   = true
+}
+
+variable "jenkins_instance_type" {
+  description = "EC2 instance type for Jenkins server"
+  type        = string
+  default     = "t2.micro"  # Free tier eligible
 }
