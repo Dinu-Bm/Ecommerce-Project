@@ -31,3 +31,20 @@ variable "key_name" {
   type        = string
 }
 
+variable "db_instance_type" {
+  description = "RDS instance type"
+  type        = string
+  default     = "db.t2.micro"  # Free tier eligible
+}
+
+variable "db_username" {
+  description = "Database administrator username"
+  type        = string
+  default     = "admin"
+}
+
+variable "db_password" {
+  description = "Database administrator password"
+  type        = string
+  sensitive   = true
+}
