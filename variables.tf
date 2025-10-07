@@ -25,3 +25,9 @@ variable "availability_zones" {
   type        = list(string)
   default     = ["ap-south-1a", "ap-south-1b"]
 }
+
+variable "key_name" {
+  description = "Name of the EC2 key pair"
+  type        = string
+}
+
