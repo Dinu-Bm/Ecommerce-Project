@@ -1,0 +1,28 @@
+# Highly Available E-Commerce Platform
+
+## Project Overview
+This project implements a fault-tolerant, multi-AZ 3-tier e-commerce infrastructure on AWS using Terraform.
+
+## Architecture
+- **Web Tier**: Application Load Balancer + Auto Scaling Group across multiple AZs
+- **Application Tier**: EC2 instances running Apache/PHP application
+- **Data Tier**: MySQL RDS with multi-AZ deployment
+- **CI/CD**: Jenkins server for automated deployments
+
+## Features
+- 99.99% uptime with multi-AZ deployment
+- Auto Scaling based on CPU utilization
+- Blue-Green deployment capability
+- Secure network architecture with public and private subnets
+- Automated CI/CD pipeline
+
+## Prerequisites
+1. AWS Account with CLI configured
+2. Terraform installed
+3. EC2 Key Pair created
+
+## Deployment Steps
+
+### 1. Initialize Terraform
+```bash
+terraform init
